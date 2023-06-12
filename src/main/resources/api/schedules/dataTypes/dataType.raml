@@ -1,0 +1,34 @@
+#%RAML 1.0 DataType
+type: array
+items:
+  type: object
+  properties:
+    availableSeats:
+      type: integer
+      example: 20
+      required: false
+    departureDateTime:
+      type: string
+      example: '2019-04-30T16:41:41.0992'
+      required: false
+    travelRoute:
+      type: object
+      properties:
+        destinationLocation:
+          type: object
+          properties:
+            locationCode:
+              type: string
+              example: KLG-MY
+              required: false
+        originLocation:
+          type: object
+          properties:
+            locationCode:
+              type: string
+              example: BEN-SG
+              required: false
+            LocationCode:
+              type: string
+              example: EL-SG
+              required: false

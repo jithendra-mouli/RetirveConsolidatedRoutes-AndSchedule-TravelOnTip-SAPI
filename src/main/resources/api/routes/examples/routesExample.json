@@ -1,0 +1,18 @@
+[
+  {
+    "originLocation":{
+      "locationCode": "BEN-SG"
+    },
+    "destinaitonLocation":{
+      "locationCode": "KLG-MY"
+    }
+  },
+  {
+    "originLocation":{
+      "locationCode": "BEN-SG"
+    },
+    "destinaitonLocation":{
+      "locationCode": "KLG-MY"
+    }
+  }
+]
