@@ -1,0 +1,50 @@
+#%RAML 1.0
+title: Retrive-TravelOnTip-Routes-And-schedule-SAPI
+description: This API will fetch schedules and routes from TravelOnTip System
+
+version: 1.0.0
+mediaType: application/json
+baseUri: https://localhost:8081/api/v1
+protocols: [HTTP, HTTPS]
+
+uses:
+  common: libraries/common/common-library.raml
+
+types:
+  routesData: !include routes/dataTypes/dataType.raml
+  schedulesData: !include schedules/dataTypes/dataType.raml
+
+/health:
+  get:
+    is: [common.errorResponses]
+    responses:
+      200:
+        body:
+          type: object
+          example: !include libraries/Health/healthSuccess.json
+            
+/{transportType}:
+  /{transportCompany}:
+    /routes: 
+      get:
+        is: [common.errorResponses, common.transactionId]
+        responses:
+          200:
+            body:
+              type: routesData
+              example: !include routes/examples/routesExample.json
+
+    /schedules:
+      get:
+        is: [common.transactionId, common.errorResponses, common.departureLocationCode, common.destinationLocationCode]        
+        responses:
+          200:
+            body:
+              type: schedulesData
+              example: !include schedules/examples/example.json
+                
+
+          
+        
+                
+      
