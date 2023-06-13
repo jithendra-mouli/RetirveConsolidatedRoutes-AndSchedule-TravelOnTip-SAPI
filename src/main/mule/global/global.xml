@@ -16,5 +16,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:request-config>
 	<configuration-properties doc:name="Configuration properties" doc:id="9bec7a0b-58a1-4b93-89d7-eeb64e5b9f1b" file="config/${MULE_ENV}.yaml" />
 	<global-property doc:name="Global Property" doc:id="62688334-7a07-4d7f-8a49-473310e557c3" name="MULE_ENV" value="local" />
+	<configuration doc:name="Configuration" doc:id="a9e66ad8-029c-4ca4-b417-2c4edcf67e25" defaultErrorHandler-ref="globalErrorHandlerError_Handler" />
     
 </mule>
